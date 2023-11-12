@@ -1,0 +1,238 @@
+:root {
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --desaturated-dark-blue: hsl(214, 17%, 51%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+    font-family: 'Manrope';
+    font-size: 16px;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#card-container {
+    width: 88%;
+    background-color: white;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px hsla(217, 19%, 35%, 0.3);
+    position: relative;
+}
+
+#header-img {
+    object-fit: cover;
+    object-position: left;
+    width: 100%;
+}
+
+.card-contents {
+    padding: 0 1.75rem;
+}
+
+h1 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: var(--very-dark-grayish-blue);
+    font-size: 17px;
+}
+
+p {
+    color: var(--desaturated-dark-blue);
+    font-size: 13px;
+    line-height: 1.25rem;
+    font-weight: 500;
+}
+
+/* Profile Component */
+
+.profile-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#profile-contents {
+    display: flex;
+    align-items: center;
+}
+
+#profile-img {
+    border-radius: 50%;
+    height: 3rem;
+    margin: 1.25rem 1rem 1.25rem 0;
+}
+
+#user-profile {
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--very-dark-grayish-blue);
+}
+
+.date {
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--desaturated-dark-blue)
+}
+
+.share-icon {
+    cursor: pointer;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    padding: 10px;
+    transition-duration: 200ms;
+}
+
+.share-icon-light {
+    background-color: var(--light-grayish-blue);
+}
+
+.share-icon-light:hover {
+    background-color: var(--grayish-blue);
+}
+
+.share-icon-dark:hover {
+    background-color: var(--very-dark-grayish-blue);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Share component */
+
+#share-container {
+    background-color: var(--very-dark-grayish-blue);
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 1.75rem;
+    margin-top: 1.5rem;
+    position: relative;
+    right: 28px;
+}
+
+.share-contents {
+    display: flex;
+    align-items: center;
+}
+
+#share-text {
+    letter-spacing: .45em;
+    color: var(--grayish-blue);
+    margin-right: 1rem;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.social-icon {
+    cursor: pointer;
+    margin-right: 0.9rem;
+}
+
+#twitter-icon {
+    height: 1.15rem;
+}
+
+.share-icon-dark {
+    background-color: var(--desaturated-dark-blue);
+}
+
+.share-icon-dark:hover {
+    background-color: var(--grayish-blue);
+}
+
+.visible {
+    display: flex;
+}
+
+/* larger screens */
+
+@media (min-width: 600px) {
+    
+    #card-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 3rem;
+        width: 700px;
+        overflow: visible;
+    }
+    
+    #image {
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        border-radius: 10px 0 0 10px;
+    }
+
+    #header-img {
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+    }
+
+    .profile-container {
+        display: flex;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    #share-container {
+        display: none;
+        width: 170px;
+        margin: 0;
+        border-radius: 10px;
+        position: absolute;
+        justify-content: center;
+        top: 8.8rem;
+        right: -4.3rem;
+        z-index: 5;
+    }
+
+    #share-container::after {
+        content: "";
+        position: absolute;
+        bottom: -0.625rem;
+        border-left: 1.25rem solid rgba(0,0,0,0);
+        border-right: 1.25rem solid rgba(0,0,0,0);
+        border-top: 1.25rem solid #48556a;
+    }
+
+    .share-icon-dark {
+        display: none;
+    }
+
+    #pinterest-icon {
+        margin-right: 0;
+    }
+    
+
+}

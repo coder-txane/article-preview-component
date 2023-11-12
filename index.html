@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Frontend Mentor | Article preview component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+
+<body>
+
+  <main id="card-container">
+    <div id="image">
+      <img id="header-img" src="images/drawers.jpg">
+    </div>
+    
+    <section class="card-contents sm-card-contents">
+      <h1>Shift the overall look and feel by adding these wonderful touches to furniture in your home</h1>
+
+      <p>Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips 
+      to help you make any room feel complete.</p>
+
+      <!-- initial footer -->
+      <section class="profile-container">
+        <div id="profile-contents">
+          <img src="images/avatar-michelle.jpg" id="profile-img">
+          <div id="user-profile">
+              <span class="username">Michelle Appleton</span>
+              <span class="date">Jun 2020</span>
+          </div>
+        </div>
+        <img class="share-icon share-icon-light" src="images/icon-share.svg">
+      </section>
+
+      <!-- share footer -->
+      <section class="hidden" id="share-container">
+        <div class="share-contents">
+          <span id="share-text">SHARE</span>
+          <img class="social-icon" id="facebook-icon" src="images/icon-facebook.svg">
+          <img class="social-icon" id="twitter-icon" src="images/icon-twitter.svg">
+          <img class="social-icon" id="pinterest-icon" src="images/icon-pinterest.svg">
+        </div>
+        <img class="share-icon share-icon-dark" src="images/icon-share-white.svg">
+      </section>
+      <div class="arrow-down hidden"></div>
+    </section>
+  </main>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Toané</a>.
+  </footer>
+
+  <script src="scripts.js">
+  </script>
+</body>
+</html>
